@@ -49,23 +49,23 @@ const Pomodoro = () => {
 
   return (
     <>
-      <div className=" text-center flex flex-col items-center align-center justify-center my-10 py-10">
-        <div className="text-9xl text-rebeccapurple">{formatTime(timer)}</div>
+      <div className=" text-center flex flex-col items-center align-center justify-center py-10">
+        <div className="text-9xl text-primary">{formatTime(timer)}</div>
         <div className="flex gap-10 mt-10">
           <button
-            className="text-2xl text-rebeccapurple bg-primary border-primary border-2 hover:text-secondary hover:border-secondary hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
+            className="text-2xl text-white bg-primary border-primary border-2 hover:text-primary hover:border-primary hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
             onClick={startHandler}
           >
             Start
           </button>
           <button
-            className="text-2xl text-rebeccapurple bg-primary border-primary border-2 hover:text-secondary hover:border-secondary hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
+            className="text-2xl text-white bg-primary border-primary border-2 hover:text-primary hover:border-primary hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
             onClick={pauseHandler}
           >
             Pause
           </button>
           <button
-            className="text-2xl text-rebeccapurple bg-primary border-primary border-2 hover:text-secondary hover:border-secondary hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
+            className="text-2xl text-white bg-primary border-primary border-2 hover:text-primary hover:border-primary hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
             onClick={resetHandler}
           >
             Reset
