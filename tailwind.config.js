@@ -12,6 +12,7 @@ export default {
       rebeccapurple: "#663399",
       white: "#ffffff",
       gray: "#f2f2f2",
+      red: "#ff0000",
     },
     extend: {},
   },
