@@ -43,7 +43,7 @@ const Login = () => {
             className="w-full block font-bold mb-2 text-2xl text-white bg-Rebeccapurple border-Rebeccapurple border-2 hover:text-Rebeccapurple hover:border-primary hover:bg-white focus:outline-none  font-bold py-1 px-2 rounded"
             type="submit"
           >
-            Register
+            Login
           </button>
         </div>
           {/* <div className="flex items-center justify-end">
