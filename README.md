@@ -19,4 +19,4 @@ JavaScript: For implementing app logic and interactivity.
 Tailwind CSS: Styled the application using Tailwind CSS to ensure an appealing and user-friendly design.
 
 ## Getting Started
-Clone this repository to your local machine using git clone https://github.com/akashsonkamble/task-master.git Navigate to the project directory and install dependencies using npm install Start the development server using npm run dev Open your web browser and visit http://localhost:5173 to see the app in action.
+Clone this repository to your local machine using git clone https://github.com/akashsonkamble/pomo-perfect.git Navigate to the project directory and install dependencies using npm install Start the development server using npm run dev Open your web browser and visit http://localhost:5173 to see the app in action.
