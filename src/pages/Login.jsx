@@ -2,13 +2,13 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center">
       <form
         className="bg-white shadow rounded px-8 pt-6 pb-8 mb-4 shadow-[1px_3px_60px_-9px_rgba(0,0,0,0.3)]"
       >
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-start text-sm font-bold mb-2"
             htmlFor="email"
           >
             Email
@@ -23,7 +23,7 @@ const Login = () => {
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-start text-sm font-bold mb-2"
             htmlFor="password"
           >
             Password
@@ -46,9 +46,9 @@ const Login = () => {
             Register
           </button>
         </div>
-          <div className="flex items-center justify-end">
+          {/* <div className="flex items-center justify-end">
             Not a user? &nbsp; <a href="/register">register</a>
-          </div>
+          </div> */}
       </form>
     </div>
   )
