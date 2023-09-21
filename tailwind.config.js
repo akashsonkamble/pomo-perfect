@@ -9,8 +9,7 @@ export default {
       xl: "1440px",
     },
     colors: {
-      Rebeccapurple: "#663399",
-      secondary: "#544f86",
+      rebeccapurple: "#663399",
       white: "#ffffff",
       gray: "#f2f2f2",
     },

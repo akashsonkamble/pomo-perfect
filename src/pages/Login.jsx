@@ -40,7 +40,7 @@ const Login = () => {
         
         <div className="flex items-center justify-center">
           <button
-            className="w-full block font-bold mb-2 text-2xl text-white bg-Rebeccapurple border-Rebeccapurple border-2 hover:text-Rebeccapurple hover:border-primary hover:bg-white focus:outline-none  font-bold py-1 px-2 rounded"
+            className="w-full block font-bold mb-2 text-2xl text-white bg-rebeccapurple border-rebeccapurple border-2 hover:text-rebeccapurple hover:border-primary hover:bg-white focus:outline-none  font-bold py-1 px-2 rounded"
             type="submit"
           >
             Login

@@ -48,22 +48,22 @@ const HomePage = () => {
   return (
     <>
       <div className=" text-center flex flex-col items-center align-center justify-center py-10">
-        <div className="text-9xl text-Rebeccapurple">{formatTime(timer)}</div>
+        <div className="text-9xl text-rebeccapurple">{formatTime(timer)}</div>
         <div className="flex gap-10 mt-10">
           <button
-            className="text-2xl text-white bg-Rebeccapurple border-Rebeccapurple border-2 hover:text-Rebeccapurple hover:border-rebeccapurple hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
+            className="text-2xl text-white bg-rebeccapurple border-rebeccapurple border-2 hover:text-rebeccapurple hover:border-rebeccapurple hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
             onClick={startHandler}
           >
             Start
           </button>
           <button
-            className="text-2xl text-white bg-Rebeccapurple border-Rebeccapurple border-2 hover:text-Rebeccapurple hover:border-rebeccapurple hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
+            className="text-2xl text-white bg-rebeccapurple border-rebeccapurple border-2 hover:text-rebeccapurple hover:border-rebeccapurple hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
             onClick={pauseHandler}
           >
             Pause
           </button>
           <button
-            className="text-2xl text-white bg-Rebeccapurple border-Rebeccapurple border-2 hover:text-Rebeccapurple hover:border-rebeccapurple hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
+            className="text-2xl text-white bg-rebeccapurple border-rebeccapurple border-2 hover:text-rebeccapurple hover:border-rebeccapurple hover:bg-white focus:outline-none  font-bold py-2 px-4 rounded"
             onClick={resetHandler}
           >
             Reset
