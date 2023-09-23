@@ -26,6 +26,14 @@ const Login = () => {
     e.preventDefault();
 
     if (!login) {
+      if (!email) {
+        setError("Please enter an email.");
+        return;
+      }
+      if (!email.includes("@")) {
+        setError("Please enter a valid email.");
+        return;
+      }
       if (password.length < 6) {
         setError("Password must be at least 6 characters.");
         return;
