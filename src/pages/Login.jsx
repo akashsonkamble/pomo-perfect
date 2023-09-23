@@ -14,6 +14,7 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+ 
   const emailChangeHandler = (e) => {
     setEmail(e.target.value);
   };
@@ -26,6 +27,10 @@ const Login = () => {
     e.preventDefault();
 
     if (!login) {
+      if (password.length < 6) {
+        setError("Password must be at least 6 characters.");
+        return;
+      }
       createUserWithEmailAndPassword(auth, email, password)
         .then((data) => {
           console.log("User registered:", data);
