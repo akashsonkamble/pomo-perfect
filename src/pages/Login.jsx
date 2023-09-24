@@ -79,7 +79,9 @@ const LoginPage = () => {
             required
           />
         </div>
-        {error && <p className="text-red text-xs italic">{error}</p>}
+        <p className="text-red text-center font-bold  text-sm italic">
+          {error}
+        </p>
 
         <div className="flex items-center justify-center">
           <button
