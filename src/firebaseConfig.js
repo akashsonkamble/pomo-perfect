@@ -1,4 +1,4 @@
-import { getApp, getApps, initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
@@ -10,9 +10,5 @@ const firebaseConfig = {
   appId: String(import.meta.env.VITE_APP_ID),
 };
 
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-// if (!firebase.apps.length) {
-//   firebase.initializeApp(firebaseConfig);
-// }
-const auth = getAuth(app);
-export default auth;
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
