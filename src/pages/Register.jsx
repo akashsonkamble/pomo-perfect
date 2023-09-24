@@ -3,7 +3,7 @@ import { auth } from "../firebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 
-const Register = () => {
+const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -119,4 +119,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterPage;

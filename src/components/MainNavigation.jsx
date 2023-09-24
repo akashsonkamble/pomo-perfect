@@ -22,9 +22,7 @@ function MainNavigation() {
         <div className="flex gap-4">
           {isLoggedIn && (
             <button onClick={logOut}>
-              <Link className="font-bold decoration-none">
-                Logout
-              </Link>
+              <Link className="font-bold decoration-none">Logout</Link>
             </button>
           )}
         </div>

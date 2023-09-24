@@ -6,12 +6,12 @@ import {
   Navigate,
 } from "react-router-dom";
 import RootLayout from "./pages/Root";
-import Login from "./pages/Login";
+import LoginPage from "./pages/Login";
 import ErrorPage from "./pages/Error";
 import HomePage from "./pages/Home";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebaseConfig";
-import Register from "./pages/Register";
+import RegisterPage from "./pages/Register";
 
 function App() {
   const [user] = useAuthState(auth);
@@ -23,11 +23,11 @@ function App() {
         <Route path="/" element={<RootLayout />}>
           <Route
             index
-            element={isLoggedIn ? <Navigate to="/home" /> : <Register />}
+            element={isLoggedIn ? <Navigate to="/home" /> : <RegisterPage />}
           />
           <Route
             path="/login"
-            element={isLoggedIn ? <HomePage /> : <Login />}
+            element={isLoggedIn ? <HomePage /> : <LoginPage />}
           />
           <Route
             path="/home"

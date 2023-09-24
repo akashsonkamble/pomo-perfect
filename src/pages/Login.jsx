@@ -4,11 +4,10 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-const Login = () => {
+const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  // const [login, setLogin] = useState(false);
 
   const [user] = useAuthState(auth);
   const isLoggedIn = !!user;
@@ -29,11 +28,9 @@ const Login = () => {
     if (!isLoggedIn) {
       signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-          console.log("Logged in successfully"); // Add a log here
           navigate("/home");
         })
         .catch((error) => {
-          console.error("Error signing in:", error); // Add an error log here
           setError(error.message);
         });
     }
@@ -108,4 +105,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;
