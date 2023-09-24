@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import { auth } from "../firebaseConfig";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
 
-const LoginPage = () => {
+const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
-  const [user] = useAuthState(auth);
-  const isLoggedIn = !!user;
+  const [login, setLogin] = useState(false);
 
   const navigate = useNavigate();
 
- 
   const emailChangeHandler = (e) => {
     setEmail(e.target.value);
   };
@@ -26,16 +22,24 @@ const LoginPage = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if (!isLoggedIn) {
-      signInWithEmailAndPassword(auth, email, password)
-        .then(() => {
+    if (!login) {
+      if (password.length < 6) {
+        setError("Password must be at least 6 characters long.");
+      }
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((data) => {
+          console.log("User registered:", data);
           navigate("/home");
         })
         .catch((error) => {
-          setError(error.message);
+          if (error.code === "auth/email-already-in-use") {
+            setError("Email is already in use.");
+          } else {
+            setError(error.message);
+          }
         });
     }
-
     setEmail("");
     setPassword("");
   };
@@ -80,25 +84,34 @@ const LoginPage = () => {
             required
           />
         </div>
-        {error && <p className="text-red text-xs italic">{error}</p>}
+        {error && (
+          <p className="text-red text-center font-bold  text-sm italic">
+            {error}
+          </p>
+        )}
 
         <div className="flex items-center justify-center">
           <button
             className="w-full block font-bold mb-2 text-2xl text-white bg-rebeccapurple border-rebeccapurple border-2 hover:text-rebeccapurple hover:border-primary hover:bg-white focus:outline-none  font-bold py-1 px-2 rounded"
             type="submit"
           >
-            Login
+            Register
           </button>
         </div>
         <div className="flex items-center justify-end">
           <p>
-            Not a user? &nbsp;
-            <Link
-              className="underline hover:underline-offset-4 border-gray-500"
-              to="/"
+            Already a user? &nbsp;
+            <span
+              className="text-blue-500 cursor-pointer"
+              onClick={() => setLogin(!login)}
             >
-              Rgister here
-            </Link>
+              <Link
+                className="underline hover:underline-offset-4 border-gray-500"
+                to="/login"
+              >
+                Login here
+              </Link>
+            </span>
           </p>
         </div>
       </form>
@@ -106,4 +119,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
