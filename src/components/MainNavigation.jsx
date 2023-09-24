@@ -11,7 +11,7 @@ function MainNavigation() {
 
   const logOut = () => {
     signOut(auth).then(() => {
-      navigate("/");
+      navigate("/login");
     });
   };
 
@@ -20,16 +20,12 @@ function MainNavigation() {
       <h1 className="font-bold text-4xl">PomoPerfect</h1>
       <nav>
         <div className="flex gap-4">
-          {isLoggedIn ? (
+          {isLoggedIn && (
             <button onClick={logOut}>
-              <Link className="font-bold decoration-none" to="/">
+              <Link className="font-bold decoration-none">
                 Logout
               </Link>
             </button>
-          ) : (
-            <Link className="font-bold decoration-none" to="/">
-              Register
-            </Link>
           )}
         </div>
       </nav>
