@@ -6,7 +6,7 @@
 ![Error Page](./public/error.png)
 
 ## Description
-Developed a web application that combines Firebase authentication, a Pomodoro timer, and modern UI styling using Tailwind CSS. 
+Developed a Pomodoro timer web application with user authentication capabilities. Leveraged Firebase for secure user registration, login, and authentication. Styled the user interface using Tailwind CSS for an elegant and responsive design. 
 
 ## Features
 Timer Functionality: Users can set a timer for focused work sessions (typically 25 minutes) followed by short break intervals (5 minutes).
