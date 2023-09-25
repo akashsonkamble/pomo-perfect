@@ -7,7 +7,7 @@ function ErrorPage() {
       <p className="text-3xl my-10">Could not find this page!</p>
       <Link
         to="/login"
-        className="font-bold decoration-none my-10 py-2 px-4 border rounded-3xl hover:bg-rebeccapurple hover:text-white active:bg-rebeccapurple active:text-white focus:outline-none focus:ring"
+        className="font-bold decoration-none my-10 py-2 px-4 border rounded-3xl hover:bg-rebeccapurple hover:text-white active:bg-rebeccapurple active:text-white focus:outline-none"
       >
         Back to Login
       </Link>
